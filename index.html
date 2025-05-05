@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDI WebSocket Remoto</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f0f0f0; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; }
+        .control-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Incluye padding y border en el width */
+        }
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Control Remoto MIDI</h1>
+
+        <div class="control-group">
+            <label for="midiInSelect">Entrada MIDI (Tu Piano):</label>
+            <select id="midiInSelect">
+                <option value="">-- Esperando dispositivos MIDI --</option>
+                <!-- Las opciones de entrada MIDI se llenarán aquí con JavaScript -->
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="midiOutSelect">Salida MIDI (Donde sonará el otro):</label>
+            <select id="midiOutSelect">
+                <option value="">-- Esperando dispositivos MIDI --</option>
+                <!-- Las opciones de salida MIDI se llenarán aquí con JavaScript -->
+            </select>
+        </div>
+
+        <div id="status">
+            Esperando conexión con el servidor...
+        </div>
+    </div>
+
+    <!-- Incluimos nuestro archivo JavaScript cliente -->
+    <script src="client.js"></script>
+
+</body>
+</html>

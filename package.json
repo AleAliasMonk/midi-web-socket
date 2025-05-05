@@ -1,0 +1,26 @@
+{
+  "name": "simple-websocket-chat-server",
+  "version": "1.0.0",
+  "description": "Servidor simple de chat con WebSockets (ws) para Glitch",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.17.0"   
+  },
+  "engines": {
+    "node": "16.x" 
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/TU-NOMBRE-DE-PROYECTO" 
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "websocket",
+    "chat",
+    "ws"
+  ]
+}
